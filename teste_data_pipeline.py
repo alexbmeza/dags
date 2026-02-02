@@ -37,4 +37,5 @@ t2 = BashOperator(
 )
 
 
-t1 >> [t2]
+t1.set_downstream(t2)
+
