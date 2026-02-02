@@ -17,6 +17,7 @@ dag = DAG (
     default_args= default_args,
     start_date=datetime(2026,1,17),
     schedule='@daily',
+    catchup=False,
     tags=['treinamento', 'teste','bash']
 )
 
@@ -34,5 +35,6 @@ t2 = BashOperator(
     dag=dag
 
 )
+
 
 t1 >> [t2]
